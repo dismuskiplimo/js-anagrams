@@ -9,6 +9,7 @@ module.exports = function (str, str1) {
     let strArr = [];
     let str1Arr = [];
 
+    // convert the strings to arrays
     for(let i = 0; i < str.length; i++){
       strArr.push(str[i]);
       str1Arr.push(str1[i]);
@@ -18,6 +19,7 @@ module.exports = function (str, str1) {
     strArr.sort();
     str1Arr.sort();
 
+    // check if the letters are in the same position after sorting
     for(let i = 0; i < strArr.length; i++){
       if(strArr[i] !== str1Arr[i]){
         return false;
