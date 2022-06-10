@@ -1,28 +1,32 @@
 module.exports = function (str, str1) {
-  // write your code here
-  str = str.replace(/[^\w]/g, "").toLowerCase();
-  str1 = str1.replace(/[^\w]/g, "").toLowerCase()
-  let hash = {};
-  for(let i = 0; i < str.length; i++){
-    let key = str[i];
-    hash[key] = hash[key] + 1 || 1;
-  }
+  // remove invalid characters and convert to lowercase
+  str = str.replace(/([^\w]|[_])+/g, "").toLowerCase();
+  str1 = str1.replace(/([^\w]|[_])+/g, "").toLowerCase();
 
-  for(let i = 0; i < str1.length; i++){
-    let key = str1[i];
-    hash[key] -= 1;
-  }
+  // check if they are the same length
+  if(str.length === str1.length){
+    // arrays to hold individual characters
+    let strArr = [];
+    let str1Arr = [];
 
-  let result = [];
-  for(const e in hash){
-    if(hash[e] > 0 && hash[e] != undefined){
-      result.push(hash[e]);
-      console.log(result);
+    for(let i = 0; i < str.length; i++){
+      strArr.push(str[i]);
+      str1Arr.push(str1[i]);
     }
-  }
-  if(result.length === 0){
+
+    // sort the arrays
+    strArr.sort();
+    str1Arr.sort();
+
+    for(let i = 0; i < strArr.length; i++){
+      if(strArr[i] !== str1Arr[i]){
+        return false;
+      }
+    }
+
     return true;
-  }else{
-    return false;
+
   }
+  
+  return false;
 }
