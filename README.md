@@ -8,6 +8,16 @@ For example:
 - `friend` and `Finder` are anagrams.
 - `The Morse Code` and `Here come dots` are anagrams as well.
 
-**Note:** You'll need to remove **all non-alphanumeric characters** (punctuation, spaces and symbols) and turn everything into the same case (lower or upper case) in order to check for palindromes.
+The anagram checker first removas all non alphanumeric characters before evaluation
 
-Submit a pull request to the main branch with your solution. Do not modify the tests. Once you have created a PR with passing tests, then you have successfully completed the exercise.
+## How to use
+The anagram checker runs on `node.js` and is available in the `anagram-checker.js` file. Simply copy this file into your project and import it inside the file you are working on.
+
+## Tests
+This repo contains a test to verify the accuracy of the anagram checker. It includes simple tests but you can modify the `tests.js` files to include edge cases.
+
+### How to run the tests
+In order to run the tests, you need to install all the dependencies first. To do this, first run:
+`nmp install`
+Then
+`npm run test`
