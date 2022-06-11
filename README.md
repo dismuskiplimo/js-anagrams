@@ -14,10 +14,10 @@ The anagram checker first removas all non alphanumeric characters before evaluat
 The anagram checker runs on `node.js` and is available in the `anagram-checker.js` file. Simply copy this file into your project and import it inside the file you are working on.
 
 ## Tests
-This repo contains a test to verify the accuracy of the anagram checker. It includes simple tests but you can modify the `tests.js` files to include edge cases.
+This repo contains a test to verify the accuracy of the anagram checker. It includes simple tests but you can modify the `tests.js` files to include normal and edge cases.
 
 ### How to run the tests
 In order to run the tests, you need to install all the dependencies first. To do this, first run:
-`nmp install`
-Then
+`nmp install` <br>
+Then <br>
 `npm run test`
